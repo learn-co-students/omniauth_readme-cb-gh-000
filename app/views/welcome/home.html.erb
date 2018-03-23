@@ -1,1 +1,8 @@
-<%# Add the Facebook login link here %>
+
+<% if logged_in %>
+  name: <%= @user.name %> <br>
+  email: <%= @user.email %> <br>
+  <img src="<%= @user.photo %>" title="facebook_image"> <br>
+<% else %>
+  <%= link_to("Log in through facebook", "/auth/facebook") %>
+<% end %>
